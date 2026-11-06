@@ -1,0 +1,521 @@
+/* ======================================================
+   VARIABLES DE COLOR Y ESTILOS GLOBALES (VINO Y ROJO)
+   ====================================================== */
+:root {
+  /* Paleta Vino y Rojo */
+  --vino-profundo: #3B0910;
+  --vino-principal: #6B0F1A;
+  --vino-medio: #8B1E2B;
+  --rojo-vivido: #B80C09;
+  --rojo-acento: #D62828;
+  --rojo-claro-bg: #FFF2F4;
+
+  /* Colores Neutros */
+  --bg-principal: #FAFAF9;
+  --blanco: #FFFFFF;
+  --texto-oscuro: #231114;
+  --texto-mutado: #6E5B5E;
+  --borde-suave: #EBE0E2;
+
+  /* Efectos y Sombras */
+  --radius-tarjeta: 16px;
+  --radius-boton: 10px;
+  --sombra-card: 0 10px 25px rgba(59, 9, 16, 0.07);
+  --sombra-hover: 0 14px 30px rgba(214, 40, 40, 0.18);
+  --transicion: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-principal);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ======================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ====================================================== */
+.navbar {
+  background: var(--blanco);
+  border-bottom: 1px solid var(--borde-suave);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--vino-profundo);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo .highlight {
+  color: var(--rojo-acento);
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  background: var(--bg-principal);
+  border: 2px solid var(--borde-suave);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: var(--transicion);
+}
+
+.search-bar:focus-within {
+  border-color: var(--rojo-acento);
+}
+
+.search-bar input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.btn-search {
+  background: transparent;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.cart-btn {
+  background: var(--rojo-claro-bg);
+  color: var(--vino-principal);
+  border: 1px solid var(--borde-suave);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transicion);
+}
+
+.cart-btn:hover {
+  background: var(--vino-principal);
+  color: var(--blanco);
+}
+
+.cart-count {
+  background: var(--rojo-acento);
+  color: var(--blanco);
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+/* BARRA DE CATEGORÍAS */
+.categories-bar {
+  background: var(--vino-profundo);
+  padding: 12px 0;
+}
+
+.categories-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.cat-link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: var(--transicion);
+}
+
+.cat-link:hover, .cat-link.active {
+  background: var(--rojo-acento);
+  color: var(--blanco);
+}
+
+/* ======================================================
+   HERO / OFERTAS DESTACADAS DEL DÍA
+   ====================================================== */
+.hero-offers {
+  background: linear-gradient(135deg, var(--vino-profundo) 0%, var(--vino-principal) 100%);
+  color: var(--blanco);
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.badge-flash {
+  background: var(--rojo-acento);
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.hero-info h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-desc {
+  opacity: 0.9;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.price-current {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFD166;
+}
+
+.price-old {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.timer {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: var(--radius-boton);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.btn-primary {
+  background: var(--rojo-acento);
+  color: var(--blanco);
+}
+
+.btn-primary:hover {
+  background: var(--rojo-vivido);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blanco);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+  border-color: var(--blanco);
+}
+
+.product-preview-placeholder {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  height: 320px;
+  border-radius: var(--radius-tarjeta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* ======================================================
+   CATÁLOGO DE PRODUCTOS
+   ====================================================== */
+.catalog-section {
+  padding-bottom: 60px;
+}
+
+.section-header {
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  color: var(--vino-profundo);
+  font-weight: 800;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: var(--blanco);
+  border-radius: var(--radius-tarjeta);
+  padding: 20px;
+  border: 1px solid var(--borde-suave);
+  position: relative;
+  box-shadow: var(--sombra-card);
+  transition: var(--transicion);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+  border-color: var(--rojo-acento);
+}
+
+.tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: var(--blanco);
+}
+
+.tag-new { background: var(--vino-principal); }
+.tag-hot { background: var(--rojo-acento); }
+.tag-offer { background: var(--rojo-vivido); }
+
+.card-img {
+  height: 180px;
+  background: var(--rojo-claro-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.product-cat {
+  font-size: 0.8rem;
+  color: var(--rojo-acento);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 5px 0;
+  color: var(--vino-profundo);
+}
+
+.product-desc {
+  font-size: 0.88rem;
+  color: var(--texto-mutado);
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid var(--borde-suave);
+}
+
+.product-price .current {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--vino-principal);
+}
+
+.product-price .old {
+  font-size: 0.85rem;
+  text-decoration: line-through;
+  color: var(--texto-mutado);
+  margin-left: 5px;
+}
+
+.btn-add-cart {
+  background: var(--vino-profundo);
+  color: var(--blanco);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.btn-add-cart:hover {
+  background: var(--rojo-acento);
+}
+
+/* ======================================================
+   VISUALIZACIÓN DE COMPRA / CARRITO
+   ====================================================== */
+.cart-drawer {
+  background: var(--blanco);
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-tarjeta);
+  max-width: 360px;
+  margin: 0 20px 40px auto;
+  box-shadow: var(--sombra-hover);
+  overflow: hidden;
+}
+
+.cart-header {
+  background: var(--vino-profundo);
+  color: var(--blanco);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  color: var(--blanco);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.cart-items {
+  padding: 15px 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--borde-suave);
+}
+
+.cart-item-icon {
+  font-size: 1.8rem;
+  background: var(--rojo-claro-bg);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.cart-item-details h4 {
+  font-size: 0.9rem;
+  color: var(--vino-profundo);
+}
+
+.cart-item-details .qty {
+  font-size: 0.75rem;
+  color: var(--texto-mutado);
+  display: block;
+}
+
+.cart-item-details .item-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--rojo-acento);
+}
+
+.cart-summary {
+  padding: 15px 20px;
+  background: var(--bg-principal);
+  border-top: 1px solid var(--borde-suave);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.summary-row.total {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--vino-profundo);
+  margin-top: 10px;
+}
+
+.free-badge {
+  color: var(--rojo-acento);
+  font-weight: 700;
+}
+
+.btn-checkout {
+  width: 100%;
+  background: var(--rojo-acento);
+  color: var(--blanco);
+  margin-top: 15px;
+}
+
+.btn-checkout:hover {
+  background: var(--vino-principal);
+}
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+.footer {
+  background: var(--vino-profundo);
+  color: var(--blanco);
+  padding: 40px 0;
+  border-top: 4px solid var(--rojo-acento);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.footer p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}

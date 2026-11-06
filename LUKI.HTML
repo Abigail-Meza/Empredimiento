@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovedadStore | Productos Innovadores & Ofertas</title>
+
+  <!-- Fuente Tipográfica Moderna (Google Fonts) -->
+  <link rel="preconnect" href="[suspicious link removed]">
+  <link rel="preconnect" href="[suspicious link removed]" crossorigin>
+  <link href="[suspicious link removed]" rel="stylesheet">
+  
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="LUKI.CSS">
+</head>
+<body>
+
+  <!-- BARRA NAVEGACIÓN SUPERIOR Y BUSCADOR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">Novedad<span class="highlight">Store</span></span>
+      </a>
+
+      <!-- Buscador de Productos -->
+      <div class="search-bar">
+        <input type="search" placeholder="Buscar gadgets, inventos y regalos únicos...">
+        <button type="submit" class="btn-search">🔍</button>
+      </div>
+
+      <!-- Resumen de Carrito / Estado de Compra -->
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartToggle">
+          🛒 <span class="cart-label">Mi Compra</span>
+          <span class="cart-count">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BARRA DE CATEGORÍAS -->
+  <nav class="categories-bar">
+    <div class="container categories-list">
+      <a href="#" class="cat-link active">🔥 Ofertas del Día</a>
+      <a href="#" class="cat-link">⚡ Tendencias Virales</a>
+      <a href="#" class="cat-link">🤖 Tech & Gadgets</a>
+      <a href="#" class="cat-link">🏡 Hogar Inteligente</a>
+      <a href="#" class="cat-link">🎁 Regalos Sorpresa</a>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN DESTACADA: OFERTA DEL DÍA -->
+  <section class="hero-offers">
+    <div class="container hero-grid">
+      <div class="hero-info">
+        <span class="badge-flash">⚡ OFERTA DEL DÍA - 40% OFF</span>
+        <h1>Lámpara Levitante Quantum 360°</h1>
+        <p class="hero-desc">Hacer flotar la luz ya no es cosa de magia. Dale un toque futurista a tu espacio con rotación electromagnética continua y luz cálida autorregulable.</p>
+        
+        <div class="price-box">
+          <span class="price-current">$49.990</span>
+          <span class="price-old">$83.990</span>
+          <span class="timer">⏰ Termina en 04h : 12m</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary">🔥 Comprar Ahora</button>
+          <button class="btn btn-outline">Ver Detalle</button>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="product-preview-placeholder">
+          <span>✨ [Imagen del Producto Levitante]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE PRODUCTOS NOVEDOSOS -->
+  <main class="container catalog-section">
+    <div class="section-header">
+      <h2>Catálogo de Novedades</h2>
+      <p>Inventos creativos diseñados para sorprender y simplificar tu día a día.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Producto 1 -->
+      <article class="product-card">
+        <span class="tag tag-new">Nuevo</span>
+        <div class="card-img">
+          <div class="img-placeholder">🖨️</div>
+        </div>
+        <div class="card-body">
+          <span class="product-cat">Gadgets Portátiles</span>
+          <h3 class="product-title">Impresora Térmica Pocket HD</h3>
+          <p class="product-desc">Imprime fotos, listas y stickers al instante desde tu teléfono sin usar una sola gota de tinta.</p>
+          <div class="card-footer">
+            <div class="product-price">
+              <span class="current">$29.990</span>
+              <span class="old">$39.990</span>
+            </div>
+            <button class="btn-add-cart">+ Añadir</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Producto 2 -->
+      <article class="product-card">
+        <span class="tag tag-hot">Top Ventas</span>
+        <div class="card-img">
+          <div class="img-placeholder">🔋</div>
+        </div>
+        <div class="card-body">
+          <span class="product-cat">Outdoor & Viajes</span>
+          <h3 class="product-title">Cargador Solar Plegable 4-en-1</h3>
+          <p class="product-desc">Energía infinita en tu mochila. Carga hasta 4 dispositivos en simultáneo con luz solar directa.</p>
+          <div class="card-footer">
+            <div class="product-price">
+              <span class="current">$34.990</span>
+            </div>
+            <button class="btn-add-cart">+ Añadir</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Producto 3 -->
+      <article class="product-card">
+        <span class="tag tag-offer">Oferta</span>
+        <div class="card-img">
+          <div class="img-placeholder">🌌</div>
+        </div>
+        <div class="card-body">
+          <span class="product-cat">Decoración LED</span>
+          <h3 class="product-title">Proyector Galaxia Astronauta 3D</h3>
+          <p class="product-desc">Transforma tu habitación en un universo inmersivo con efectos de nebulosas en movimiento y control remoto.</p>
+          <div class="card-footer">
+            <div class="product-price">
+              <span class="current">$24.990</span>
+              <span class="old">$35.000</span>
+            </div>
+            <button class="btn-add-cart">+ Añadir</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Producto 4 -->
+      <article class="product-card">
+        <span class="tag tag-new">Nuevo</span>
+        <div class="card-img">
+          <div class="img-placeholder">☕</div>
+        </div>
+        <div class="card-body">
+          <span class="product-cat">Hogar Inteligente</span>
+          <h3 class="product-title">Taza Autorregulable TempControl</h3>
+          <p class="product-desc">Tu café o té siempre a la temperatura perfecta todo el día mediante su base inductiva inalámbrica.</p>
+          <div class="card-footer">
+            <div class="product-price">
+              <span class="current">$39.990</span>
+            </div>
+            <button class="btn-add-cart">+ Añadir</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- VISUALIZACIÓN / PANEL DEL CARRITO DE COMPRA -->
+  <aside class="cart-drawer">
+    <div class="cart-header">
+      <h3>Estado de tu Compra (2)</h3>
+      <button class="close-cart">✕</button>
+    </div>
+
+    <div class="cart-items">
+      <div class="cart-item">
+        <div class="cart-item-icon">💡</div>
+        <div class="cart-item-details">
+          <h4>Lámpara Levitante Quantum</h4>
+          <span class="qty">Cantidad: 1</span>
+          <span class="item-price">$49.990</span>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div class="cart-item-icon">🖨️</div>
+        <div class="cart-item-details">
+          <h4>Impresora Térmica Pocket</h4>
+          <span class="qty">Cantidad: 1</span>
+          <span class="item-price">$29.990</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <div class="summary-row">
+        <span>Subtotal:</span>
+        <strong>$79.980</strong>
+      </div>
+      <div class="summary-row shipping">
+        <span>Envío:</span>
+        <span class="free-badge">¡Gratis! 🚚</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total estimado:</span>
+        <span class="total-price">$79.980</span>
+      </div>
+      <button class="btn btn-checkout">🔒 Proceder al Pago Seguro</button>
+    </div>
+  </aside>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>🔥 NovedadStore</h3>
+        <p>Tu tienda de confianza para encontrar los productos más novedosos y creativos del mercado.</p>
+      </div>
+      <div>
+        <h4>Garantía y Seguridad</h4>
+        <p>✓ Envíos a todo el país<br>✓ Pago 100% protegido<br>✓ Soporte 24/7</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
